@@ -7,16 +7,33 @@ let saberespreviosadquiridos = document.getElementById('alumno-spa');
 let tutoresAlumno = document.getElementById('tutores-de-alumnos');
 let profesoresAlumno = document.getElementById('profesor-de-alumno');
 
-datosPersonales.addEventListener('mouseleave', mostrarMenus);
-datosPersonales.addEventListener('mouseenter', quitarMenus);
+datosPersonales.addEventListener('mouseenter', mostrarMenus);
+datosPersonales.addEventListener('mouseleave', quitarMenus);
 
-function mostrarMenus() {
+datosAcademicos.addEventListener('mouseenter', mostrarMenus);
+datosAcademicos.addEventListener('mouseleave', quitarMenus);
+
+inscripcionActual.addEventListener('mouseenter', mostrarMenus);
+inscripcionActual.addEventListener('mouseleave', quitarMenus);
+
+reinscripcionAlumno.addEventListener('mouseenter', mostrarMenus);
+reinscripcionAlumno.addEventListener('mouseleave', quitarMenus);
+
+etsAlumno.addEventListener('mouseenter', mostrarMenus);
+etsAlumno.addEventListener('mouseleave', quitarMenus);
+
+saberespreviosadquiridos.addEventListener('mouseenter', mostrarMenus);
+saberespreviosadquiridos.addEventListener('mouseleave', quitarMenus);
+
+tutoresAlumno.addEventListener('mouseenter', mostrarMenus);
+tutoresAlumno.addEventListener('mouseleave', quitarMenus);
+
+profesoresAlumno.addEventListener('mouseenter', mostrarMenus);
+profesoresAlumno.addEventListener('mouseleave', quitarMenus);
+
+
+function quitarMenus() {
     console.log('hola');
-    /*
-    let claseComun = document.querySelectorAll('.comun');
-    for (let i = 0; i < claseComun.length; i++) {
-        document.querySelectorAll('.comun')[i].style.display = 'none';
-    }*/
     document.querySelector(`#${this.getAttribute("id")}`).style.background = 'blue';
     console.log(document.querySelectorAll(`#${this.getAttribute("id")} div`));
     console.log(document.querySelectorAll(`${this.getAttribute('id')}`));
@@ -30,7 +47,7 @@ function mostrarMenus() {
 
 }
 
-function quitarMenus() {
+function mostrarMenus() {
     console.log('fueras');
     document.querySelector(`#${this.getAttribute("id")} div`).style.display = 'block';
 }
